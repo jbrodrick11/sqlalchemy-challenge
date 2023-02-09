@@ -1,20 +1,19 @@
 # sqlalchemy-challenge
 
-Initially used 
+Uploaded all documents to Git repository including:
+-relevent ipynb file and app.py file
+-relevent resources (csvs,sqlite)
 
-#create route for precipitation data
-@app.route("/api/v1.0/precipitation/")
-def precipitation():
-    #create session
-    session = Session(engine)
-    #query data using session to get past 12months of precipitation data
-    last_date = dt.date(2017,8,23) - dt.timedelta(days=365)
-    prcp_date = session.query(measurement.date, measurement.prcp).filter(measurement.date>=last_date).all()
-    #close session
-    session.close()
-    #convert response to dictionary
-    prcp_json = [dict(row) for row in prcp_date]
-    #convert dictionary to json
-    return jsonify(prcp_json)
+Commented on code for flask and ipynb files accordingly.
 
-But realised JSON output does not match task criteria 
+Added descriptions on how touse Flask API when running, but for clarification;
+
+    Temperature Data with Specified Start Date (Replace YYYY-MM-DD in URL with Date to Search)
+    /api/v1.0/YYYY-MM-DD
+    (eg:/api/v1.0/2016-01-28)
+
+    Temperature Data with Specified Start and EndDate (Replace YYYY-MM-DD in URL with Dates to Search Between)
+    /api/v1.0/YYYY-MM-DD/YYYY-MM-DD
+    (eg:/api/v1.0/2015-01-20/2017-01-01)
+
+Tested all file paths and ensures all documents have accurate paths.
