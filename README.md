@@ -17,3 +17,5 @@ Added descriptions on how touse Flask API when running, but for clarification;
     (eg:/api/v1.0/2015-01-20/2017-01-01)
 
 Tested all file paths and ensures all documents have accurate paths.
+
+Uploaded all changed via Git Add/Commit
