@@ -105,7 +105,7 @@ def startdate(start):
     #close session
     session.close()
     #return stats as dictionary
-    start_json = {'min':start_info[0][0], 'avg':start_info[0][1], 'max':start_info[0][2]}
+    start_json = {'min':start_info[0][0], 'max':start_info[0][1], 'avg':start_info[0][2]}
     #convert dictionary to json
     return jsonify(start_json)
 
@@ -119,7 +119,7 @@ def startenddate(start,end):
     #close session
     session.close()
     #return stats as dictionary
-    end_json = {'min':end_info[0][0], 'avg':end_info[0][1], 'max':end_info[0][2]}
+    end_json = {'min':end_info[0][0], 'max':end_info[0][1], 'avg':end_info[0][2]}
     #convert dictionary to json
     return jsonify(end_json)
 
